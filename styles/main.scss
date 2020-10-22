@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div,
+div#__next > div > div {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #101010;
+}
+
+#background {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#profile-name {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#profile-desc {
+    color: #A1A1A1;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#profile-avatar {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#descrip-title {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+#descrip-content {
+    color: #A1A1A1;
+    font-size: 18px;
+}
+
+a[data-tooltip] {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255,255,255,0.75);
+}
+
+a[data-tooltip]::after {
+    content: attr(data-tooltip);
+    display: block;
+    position: absolute;
+    background-color: #1a1a1a;
+    padding: 0.25rem;
+    color: white;
+    border-radius: 5px;
+    font-size: 8px;
+    bottom: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity ease-out 100ms;
+    bottom: 150%;
+}
+
+a[data-tooltip]:hover::after {
+    opacity: 1;
+}
